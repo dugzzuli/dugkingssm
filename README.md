@@ -51,3 +51,6 @@ http://www.cnblogs.com/MyKingDragon/
 | service	| 业务逻辑（接口）| 	写我们的业务逻辑，也有人叫bll，在设计业务接口时候应该站在“使用者”的角度。额，不要问我为什么这里没显示！IDE调皮我也拿它没办法~
 | serviceImpl	| 业务逻辑（实现）	| 实现我们业务接口，一般事务控制是写在这里，没什么好说的。
 | web	| 控制器	| springmvc就是在这里发挥作用的，一般人叫做controller控制器，相当于struts中的action。
+
+
+
