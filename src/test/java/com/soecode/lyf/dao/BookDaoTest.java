@@ -5,8 +5,9 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.dugzzuli.dug.dao.BookDao;
+import com.dugzzuli.dug.entity.Book;
 import com.soecode.lyf.BaseTest;
-import com.soecode.lyf.entity.Book;
 
 public class BookDaoTest extends BaseTest {
 
