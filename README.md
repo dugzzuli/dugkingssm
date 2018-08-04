@@ -1,11 +1,13 @@
-# å…³äº
-æ•´åˆSSMæ¡†æ¶ï¼ˆSpringMVC + Spring + MyBatisï¼‰ï¼Œé€‚åˆåˆšæ¥è§¦springçš„ç«¥é‹ï¼Œéœ€è¦æœ‰servletå’ŒjspåŸºç¡€ã€‚å­¦ä¹ å®ŒSSMæ•´åˆåå¯ä»¥åº”ä»˜å¼€å‘å·¥ä½œï¼Œä½†æ˜¯å»ºè®®ç»§ç»­æ·±ç©¶ï¼Œå­¦ä¹ spring bootï¼Œspring cloudç­‰æŠ€æœ¯ï¼Œè®©å¼€å‘æ•ˆç‡æ›´ä¸Šä¸€å±‚æ¥¼ã€‚
+# ¹ØÓÚ
+ÕûºÏSSM¿ò¼Ü£¨SpringMVC + Spring + MyBatis£©£¬ÊÊºÏ¸Õ½Ó´¥springµÄÍ¯Ğ¬£¬ĞèÒªÓĞservletºÍjsp»ù´¡¡£Ñ§Ï°ÍêSSMÕûºÏºó¿ÉÒÔÓ¦¸¶¿ª·¢¹¤×÷£¬µ«ÊÇ½¨Òé¼ÌĞøÉî¾¿£¬Ñ§Ï°spring boot£¬spring cloudµÈ¼¼Êõ£¬ÈÃ¿ª·¢Ğ§ÂÊ¸üÉÏÒ»²ãÂ¥¡£
 
-# åšå®¢
-http://blog.csdn.net/qq598535550/article/details/51703190
 
-# ç¯å¢ƒ
+1. 2018/08/04 SpringMVC + Spring + MyBatis ÅäÖÃÍê³É
+
+# ²©¿Í
+http://www.cnblogs.com/MyKingDragon/
+
+# »·¾³
 - jdk 1.8
 - tomcat 8.5
 
-![](https://img-ask.csdn.net/upload/201806/05/1528204838_152827.png)
