@@ -1,8 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+                <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+    
+%>
 <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>『豪情』后台管理</title>
+    <title>简单通用文章系统后台管理模板</title>
+     <base href="<%=basePath%>admin/">
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>

@@ -1,8 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ page isELIgnored="false" %>
+    <!-- 引入el标识所需要的标签 -->
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
+              <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+    
+%>
 <!doctype html>
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>后台管理</title>
+    <title>简单通用文章系统后台管理模板</title>
+     <base href="<%=basePath%>admin/">
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
@@ -35,7 +48,8 @@
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                     <ul class="sub-menu">
-                        <li><a href="design.html"><i class="icon-font">&#xe008;</i>作品管理</a></li>
+                 
+                        <li><a href="<%=basePath%>admin/login"><i class="icon-font">&#xe008;</i>作品管理</a></li>
                         <li><a href="design.html"><i class="icon-font">&#xe005;</i>博文管理</a></li>
                         <li><a href="design.html"><i class="icon-font">&#xe006;</i>分类管理</a></li>
                         <li><a href="design.html"><i class="icon-font">&#xe004;</i>留言管理</a></li>
