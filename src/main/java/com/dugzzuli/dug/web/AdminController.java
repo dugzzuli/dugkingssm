@@ -33,5 +33,11 @@ public class AdminController {
 	{
 		return new ModelAndView("/admin/design");
 	}
+	
+	@RequestMapping("/editor")
+	public ModelAndView editor()
+	{
+		return new ModelAndView("/admin/editor");
+	}
 
 }
