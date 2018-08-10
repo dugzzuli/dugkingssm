@@ -1,9 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+      <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+    
+%>
+    
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>老王个人博客 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+
+<base href="<%=basePath%>">
+
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
