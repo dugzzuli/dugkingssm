@@ -29,33 +29,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="result-content">
                 <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
-                        <tbody><tr>
-                            <th width="120"><i class="require-red">*</i>分类：</th>
-                            <td>
-                                <select name="colId" id="catid" class="required">
-                                    <option value="">请选择</option>
-                                    <option value="19">精品界面</option><option value="20">推荐界面</option>
-                                </select>
-                            </td>
-                        </tr>
+                       
                             <tr>
-                                <th><i class="require-red">*</i>标题：</th>
+                                <th><i class="require-red">*</i>类别编号：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="title" size="50" value="" type="text">
                                 </td>
                             </tr>
                             <tr>
-                                <th>作者：</th>
-                                <td><input class="common-text" name="author" size="50" value="admin" type="text"></td>
+                                <th><i class="require-red">*</i>类别名称：</th>
+                                <td><input class="common-text required" name="author" size="50" value="" type="text"></td>
                             </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>缩略图：</th>
-                                <td><input name="smallimg" id="" type="file"><!--<input type="submit" onclick="submitForm('/jscss/admin/design/upload')" value="上传图片"/>--></td>
-                            </tr>
-                            <tr>
-                                <th>内容：</th>
-                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
-                            </tr>
+                           
                             <tr>
                                 <th></th>
                                 <td>
