@@ -35,6 +35,9 @@
 					 <li>
                         <span class="res-info">${errMsg}</span>
                     </li>
+                    <li>
+                        <span class="res-info">${ex.printStackTrace()}</span>
+                    </li>
 				</div>
 			</div>
 <!-- 			<div class="result-wrap"> -->

@@ -6,14 +6,19 @@ import java.util.Map;
 import org.apache.commons.collections.map.HashedMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.dugzzuli.dug.service.ICategoryService;
 
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
 	private final static Logger logger = LoggerFactory.getLogger(AdminController.class);
+	@Autowired
+	public ICategoryService categoryService;
 	@RequestMapping("/")
 	public ModelAndView index()
 	{
@@ -34,6 +39,7 @@ public class AdminController {
 	{
 		return new ModelAndView("/admin/insert");
 	}
+	
 	@RequestMapping("/system")
 	public ModelAndView system()
 	{
@@ -58,19 +64,16 @@ public class AdminController {
 	}
 	@RequestMapping("/error")
 	public ModelAndView error() {
-		Map<String,String> dataMap=new HashMap<String,String>();
+		Map<String,Object> dataMap=new HashMap<String,Object>();
 		try {
 			int i=1/0;
 		return new ModelAndView("/admin/error");
 		}
 		catch(Exception e){
-			
 				logger.error(e.getMessage());
-				
 				dataMap.put("errMsg", e.getMessage());
+				dataMap.put("ex", e);
 				return new ModelAndView("/admin/error",dataMap);
-			
-		
 		}
 	}
 
