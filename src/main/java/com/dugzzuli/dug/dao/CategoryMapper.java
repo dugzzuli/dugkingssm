@@ -1,6 +1,9 @@
 package com.dugzzuli.dug.dao;
 
+import java.util.List;
+
 import com.dugzzuli.dug.entity.Category;
+
 
 public interface CategoryMapper {
     /**
@@ -50,4 +53,7 @@ public interface CategoryMapper {
      * @mbg.generated Sat Aug 11 10:23:05 CST 2018
      */
     int updateByPrimaryKey(Category record);
+    
+    
+    List<Category> selectAll();
 }

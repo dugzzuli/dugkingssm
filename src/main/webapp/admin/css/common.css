@@ -114,8 +114,8 @@ textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type=
 .insert-tab{border-collapse:collapse;border:1px solid #eee;}
 .insert-tab th,.insert-tab td{border:1px solid #eee;}
 .insert-tab tr{line-height:40px;}
-.insert-tab th{text-align:right;font-weight:normal;padding-right:10px;font-size:14px;}
-.insert-tab td{text-align:left;padding-left:10px;}
+.insert-tab th{text-align:cneter;font-weight:normal;padding-right:10px;font-size:14px;}
+.insert-tab td{text-align:center;padding-left:10px;}
 .list-page{padding:20px 0;text-align:center;}
 .list-page a{margin:0 5px;padding:2px 7px;border:1px solid #ccc;background:#f3f3f3;}
 .list-page a:hover{background:#e4e4e4;border:1px solid #908f8f;}
