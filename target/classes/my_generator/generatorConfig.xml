@@ -15,17 +15,24 @@
 		<javaClientGenerator
 			targetPackage="com.dugzzuli.dug.dao"
 			targetProject="ssm/src/main/java" type="XMLMAPPER" />
-		<table tableName="category" enableCountByExample="false"
-        enableUpdateByExample="false"
-        enableDeleteByExample="false"
-        enableSelectByExample="false"
-        selectByExampleQueryId="false">
-		</table>
+			
+<!-- 		<table tableName="category" enableCountByExample="false" -->
+<!--         enableUpdateByExample="false" -->
+<!--         enableDeleteByExample="false" -->
+<!--         enableSelectByExample="false" -->
+<!--         selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
 		<table tableName="news" enableCountByExample="false"
         enableUpdateByExample="false"
         enableDeleteByExample="false"
         enableSelectByExample="false"
         selectByExampleQueryId="false">
 		</table>
+<!-- 		<table tableName="sysuser" enableCountByExample="false" -->
+<!--         enableUpdateByExample="false" -->
+<!--         enableDeleteByExample="false" -->
+<!--         enableSelectByExample="false" -->
+<!--         selectByExampleQueryId="false"> -->
+<!-- 		</table> -->
 	</context>
 </generatorConfiguration>

@@ -1,5 +1,7 @@
 package com.dugzzuli.dug.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,8 +11,10 @@ import com.dugzzuli.dug.service.INewsService;
 @Service
 public class NewsService implements INewsService {
 
+	
 	@Autowired
-	public NewsMapper newsMapper;
+	public NewsMapper newsMapper; 
+
 	
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
@@ -21,13 +25,13 @@ public class NewsService implements INewsService {
 	@Override
 	public int insert(News record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return newsMapper.insert(record);
 	}
 
 	@Override
 	public int insertSelective(News record) {
-		newsMapper.insertSelective(record);
-		return 0;
+		
+		return newsMapper.insertSelective(record);
 	}
 
 	@Override
@@ -52,6 +56,18 @@ public class NewsService implements INewsService {
 	public int updateByPrimaryKey(News record) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<News> selectAll() {
+		
+		return newsMapper.selectAll();
+	}
+
+	@Override
+	public List<News> selectAllNews(String order, int count) {
+		// TODO Auto-generated method stub
+		return newsMapper.selectAllNews(order,count);
 	}
 
 }

@@ -1,5 +1,8 @@
 package com.dugzzuli.dug.service;
 
+import java.util.List;
+
+import com.dugzzuli.dug.entity.Category;
 import com.dugzzuli.dug.entity.News;
 
 public interface INewsService {
@@ -58,4 +61,9 @@ public interface INewsService {
      * @mbg.generated Sat Aug 11 10:23:05 CST 2018
      */
     int updateByPrimaryKey(News record);
+
+	List<News> selectAll();
+	
+
+	List<News> selectAllNews(String order, int count);
 }

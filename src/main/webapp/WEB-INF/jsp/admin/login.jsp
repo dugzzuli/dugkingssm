@@ -19,15 +19,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <h1>后台管理</h1>
     <div class="adming_login_border">
         <div class="admin_input">
-            <form action="#" method="post">
+            <form action="<%=basePath%>admin/login" method="post">
                 <ul class="admin_items">
                     <li>
-                        <label for="user">用户名：</label>
-                        <input type="text" name="username" placeholder="admin" id="user" size="35" class="admin_input_style" />
+                        <label for="userName">用户名：</label>
+                        <input type="text" name=userName placeholder="admin" id="userName" size="35" class="admin_input_style" />
                     </li>
                     <li>
-                        <label for="pwd">密码：</label>
-                        <input type="password" name="pwd" placeholder="admin"="admin" id="pwd" size="35" class="admin_input_style" />
+                        <label for="userPwd">密码：</label>
+                        <input type="password" name="userPwd" placeholder="admin" id="userPwd" size="35" class="admin_input_style" />
                     </li>
                     <li>
                         <input type="submit" tabindex="3" value="提交" class="btn btn-primary" />

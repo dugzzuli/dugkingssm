@@ -1,5 +1,9 @@
 package com.dugzzuli.dug.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.dugzzuli.dug.entity.News;
 
 public interface NewsMapper {
@@ -58,4 +62,8 @@ public interface NewsMapper {
      * @mbg.generated Sat Aug 11 10:23:05 CST 2018
      */
     int updateByPrimaryKey(News record);
+
+	List<News> selectAll();
+	
+	List<News> selectAllNews(@Param("order")String order, @Param("count")int count);
 }
