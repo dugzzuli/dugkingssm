@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>碎言碎语 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+<title>碎言碎语 —（最怕一生碌碌无为,还感叹平凡可贵）</title>
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="description" content="国王的博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
 <LINK rel="Bookmark" href="favicon.ico">
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
@@ -37,8 +37,8 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="container cl">
 				<a class="navbar-logo hidden-xs" href="/"> <img class="logo"
-					src="img/logo.png" alt="Lao王博客" />
-				</a> <a class="logo navbar-logo-m visible-xs" href="index.html">Lao王博客</a>
+					src="img/logo.png?=v1.1" alt="国王的博客" />
+				</a> <a class="logo navbar-logo-m visible-xs" href="index">国王的博客</a>
 				<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs"
 					href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
 				<nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
@@ -64,7 +64,7 @@
 	<!--导航条-->
 	<nav class="breadcrumb">
 		<div class="container">
-			<i class="Hui-iconfont">&#xe67f;</i> <a href="index.html"
+			<i class="Hui-iconfont">&#xe67f;</i> <a href="index"
 				class="c-primary">首页</a> <span class="c-gray en">&gt;</span> <span
 				class="c-gray">碎言碎语</span>
 		</div>
@@ -80,7 +80,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -92,7 +92,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -128,7 +128,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -140,7 +140,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -152,7 +152,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -164,7 +164,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -176,7 +176,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -188,7 +188,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -200,7 +200,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>
@@ -212,7 +212,7 @@
 					</div>
 					<div class="cd-timeline-content">
 						<h4>测试测试</h4>
-						<p>Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。Lao王博客测试版本上线。。</p>
+						<p>国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。国王的博客测试版本上线。。</p>
 						<a href="http://www.wfyvv.com" class="f-r"><input
 							class="btn btn-success size-S" type="button" value="更多"></a>
 						<span class="cd-date">2017年1月01日</span>

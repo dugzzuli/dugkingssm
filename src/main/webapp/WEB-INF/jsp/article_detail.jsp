@@ -9,7 +9,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>学无止尽 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+<title>${model.newsTitle } —（最怕一生碌碌无为,还感叹平凡可贵）</title>
 <meta charset="utf-8">
 <base href="<%=basePath%>">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -17,8 +17,8 @@
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="keywords" content="${model.seoDesc }">
+<meta name="description" content="${model.seoContent }">
 <LINK rel="Bookmark" href="favicon.ico">
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
@@ -44,9 +44,9 @@
 	<header class="navbar-wrapper">
 		<div class="navbar navbar-fixed-top">
 			<div class="container cl">
-				<a class="navbar-logo hidden-xs" href="index.html"> <img
-					class="logo" src="img/logo.png" alt="Lao王博客" />
-				</a> <a class="logo navbar-logo-m visible-xs" href="index.html">Lao王博客</a>
+				<a class="navbar-logo hidden-xs" href="/"> <img
+					class="logo" src="img/logo.png" alt="DugKing of 博客" />
+				</a> <a class="logo navbar-logo-m visible-xs" href="index">国王的博客</a>
 				<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs"
 					href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
 				<nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
@@ -72,10 +72,10 @@
 	<!--导航条-->
 	<nav class="breadcrumb">
 		<div class="container">
-			<i class="Hui-iconfont">&#xe67f;</i> <a href="index.html"
+			<i class="Hui-iconfont">&#xe67f;</i> <a href="index"
 				class="c-primary">首页</a> <span class="c-gray en">&gt;</span> <span
 				class="c-gray">文章</span> <span class="c-gray en">&gt;</span> <span
-				class="c-gray">个人博客应该选择什么样的域名和域名后缀</span>
+				class="c-gray">${model.newsTitle }</span>
 		</div>
 	</nav>
 
@@ -87,68 +87,33 @@
 			<div class="col-lg-9 col-md-9 w_main_left">
 				<div class="panel panel-default  mb-20">
 					<div class="panel-body pt-10 pb-10">
-						<h2 class="c_titile">我的个人博客之——阿里云空间选择</h2>
+						<h2 class="c_titile">${model.newsTitle }</h2>
 						<p class="box_c">
-							<span class="d_time">发布时间：2017-02-05</span><span>编辑：<a
-								href="mailto:wfyv@qq.com">wilco</a></span><span>阅读（88646）</span>
+							<span class="d_time">发布时间：${model.creatdate }</span><span>编辑：<a
+								href="bingwei2642@qq.com">${model.author }</a></span><span>阅读（${model.hits }）</span>
 						</p>
 						<ul class="infos">
-							<p>之前服务器放在电信机房，
-								联通用户访问速度很不稳定，经常出现访问速度慢的问题，换到阿里云解决了之前的问题。很多人都问我的博客选得什么空间，一年的费用得多少钱，今天我列个表出来，供大家参考。</p>
-							<p>
-								&nbsp;<img src="temp/at1.png" alt="个人博客阿里云空间选择" width="700"
-									height="886">
-							</p>
-							<p>
-								对于访问量不大，小型网站带宽可以选择1M的，每个月<span class="cny"
-									style="margin: 0px 1px; padding: 0px; border: 0px; font-family: Arial; line-height: 20px; font-size: 20px; vertical-align: baseline; color: rgb(255, 102, 0); white-space: nowrap;">¥</span><span
-									class="money"
-									style="margin: 0px; padding: 0px; border: 0px; font-family: 微软雅黑, 'Microsoft Yahei', 'Hiragino Sans GB', tahoma, arial, 宋体; line-height: 20px; font-size: 20px; vertical-align: baseline; color: rgb(255, 102, 0); white-space: nowrap;">56.80</span>一年也就568块钱，每天投入也就不到2块钱。
-							</p>
-							<p>
-								<img src="temp/at2.png" alt="个人博客阿里云空间选择">
-							</p>
-							<p>
-								<strong>1、为什么选Linux？</strong>
-							</p>
-							<p>程序用PHP，速度快，配置低（windows必选1G的内存Linux选512MB能同样达到要求）。Linux的系统安全性非常高。Linux服务器的维护与扩展到性价比和性能都高于Windows。</p>
-							<p>1) 最流行的服务器端操作系统，强大的安全性和稳定性</p>
-							<p>2) 免费且开源，轻松建立和编译源代码</p>
-							<p>3) 通过SSH方式远程访问您的云服务器</p>
-							<p>4)
-								一般用于高性能web等服务器应用，支持常见的PHP/Python等编程语言，支持MySQL等数据库（需自行安装)</p>
-							<p>
-								<strong>2、操作系统为什么选CentOS 安全加固版（推荐）？</strong>
-							</p>
-							<p>在原
-								CentOS镜像的基础上，系统进一步安全加固，安装了阿里云独有的入侵防御系统，系统中会出现aegis进程，该系统增加了实时后门，Webshell检测，更加智能的暴力破解防御和多种入侵行为监控，让服务器更加安全可靠。</p>
-							<p>
-								<a href="http://www.aliyun.com/product/ecs" target="_blank"><strong><span
-										style="color: rgb(0, 0, 255);">前往阿里云官网购买&gt;&gt;</span></strong></a>
-							</p>
-							<p>&nbsp;</p>
-							<p align="center" class="pageLink"></p>
+							${model.content }
 
 						</ul>
 
 						<div class="keybq">
 							<p>
-								<span>关键字</span>：<a class="label label-default">个人博客</a><a
-									class="label label-default">阿里云</a><a
-									class="label label-default">空间</a>
+								<span>关键字</span>：
+								<a class="label label-default">${model.seoDesc }</a>
 							</p>
 						</div>
 
 
 
-						<div class="nextinfo">
-							<p class="last">
-								上一篇：<a href="#">免费收录网站搜索引擎登录口大全</a>
-							</p>
-							<p class="next">
-								下一篇：<a href="#">javascript显示年月日时间代码</a>
-							</p>
-						</div>
+<!-- 						<div class="nextinfo"> -->
+<!-- 							<p class="last"> -->
+<!-- 								上一篇：<a href="#">免费收录网站搜索引擎登录口大全</a> -->
+<!-- 							</p> -->
+<!-- 							<p class="next"> -->
+<!-- 								下一篇：<a href="#">javascript显示年月日时间代码</a> -->
+<!-- 							</p> -->
+<!-- 						</div> -->
 
 					</div>
 				</div>
@@ -229,26 +194,12 @@
 					</div>
 					<div class="tab-category-item">
 						<ul class="index_recd">
-							<li><a href="#">阻止a标签href默认跳转事件</a>
+							<c:forEach var="model" items="${listHot}">
+							<li><a href="article_detail/${model.id}">${model.newsTitle }</a>
 								<p class="hits">
-									<i class="Hui-iconfont" title="点击量">&#xe622;</i> 276
+									<i class="Hui-iconfont" title="点击量">&#xe622;</i> ${model.hits }
 								</p></li>
-							<li><a href="#">PHP面试题汇总</a>
-								<p class="hits">
-									<i class="Hui-iconfont" title="点击量">&#xe622;</i> 276
-								</p></li>
-							<li><a href="#">阻止a标签href默认跳转事件</a>
-								<p class="hits">
-									<i class="Hui-iconfont" title="点击量">&#xe622;</i> 276
-								</p></li>
-							<li><a href="#">阻止a标签href默认跳转事件</a>
-								<p class="hits">
-									<i class="Hui-iconfont" title="点击量">&#xe622;</i> 276
-								</p></li>
-							<li><a href="#">PHP面试题汇总</a>
-								<p class="hits">
-									<i class="Hui-iconfont" title="点击量">&#xe622;</i> 276
-								</p></li>
+						</c:forEach>
 						</ul>
 					</div>
 				</div>
@@ -259,7 +210,7 @@
 						<a href=""><strong>扫我关注</strong></a>
 					</div>
 					<div class="tab-category-item">
-						<img data-original="temp/gg.jpg" class="img-responsive lazyload"
+						<img  src="temp/wx.png" class="img-responsive"
 							alt="响应式图片">
 					</div>
 				</div>

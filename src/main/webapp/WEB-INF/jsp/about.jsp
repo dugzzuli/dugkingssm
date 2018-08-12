@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>关于我 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+<title>关于我 —（最怕一生碌碌无为,还感叹平凡可贵）</title>
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="description" content="国王的博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
 <LINK rel="Bookmark" href="favicon.ico">
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
@@ -35,9 +35,9 @@
 	<header class="navbar-wrapper">
 		<div class="navbar navbar-fixed-top">
 			<div class="container cl">
-				<a class="navbar-logo hidden-xs" href="index.html"> <img
-					class="logo" src="img/logo.png" alt="Lao王博客" />
-				</a> <a class="logo navbar-logo-m visible-xs" href="index.html">Lao王博客</a>
+				<a class="navbar-logo hidden-xs" href="index"> <img
+					class="logo" src="img/logo.png" alt="国王的博客" />
+				</a> <a class="logo navbar-logo-m visible-xs" href="index">国王的博客</a>
 				<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs"
 					href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
 				<nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
@@ -63,7 +63,7 @@
 	<!--导航条-->
 	<nav class="breadcrumb">
 		<div class="container">
-			<i class="Hui-iconfont">&#xe67f;</i> <a href="index.html"
+			<i class="Hui-iconfont">&#xe67f;</i> <a href="index"
 				class="c-primary">首页</a> <span class="c-gray en">&gt;</span> <span
 				class="c-gray">关于</span>
 		</div>

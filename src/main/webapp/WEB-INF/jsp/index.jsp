@@ -10,7 +10,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>老王个人博客 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+<title>国王的博客  —（最怕一生碌碌无为,还感叹平凡可贵）</title>
 
 <base href="<%=basePath%>">
 
@@ -21,7 +21,7 @@
 	content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="description" content="国王的博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
 <LINK rel="Bookmark" href="favicon.ico">
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
@@ -42,7 +42,9 @@
 	
 	
 	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}
+
 
 
 
@@ -53,9 +55,9 @@
 	<header class="navbar-wrapper">
 		<div class="navbar navbar-fixed-top">
 			<div class="container cl">
-				<a class="navbar-logo hidden-xs" href="index.html"> <img
-					class="logo" src="img/logo.png" alt="Lao王博客" />
-				</a> <a class="logo navbar-logo-m visible-xs" href="index.html">Lao王博客</a>
+				<a class="navbar-logo hidden-xs" href="index"> <img
+					class="logo" src="img/logo.png" alt="国王的博客" />
+				</a> <a class="logo navbar-logo-m visible-xs" href="index">国王的博客</a>
 				<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs"
 					href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
 				<nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
@@ -136,17 +138,17 @@
 						</c:if>
 
 						<c:if test="${not empty model.pic}">
-							<li class="index_arc_item"><a href="article_detail/${model.id }"
-								class="${model.pic }"> <img class="lazyload"
-									data-original="${model.pic }" alt="${model.newsTitle }">
+							<li class="index_arc_item"><a
+								href="article_detail/${model.id }" class="${model.pic }"> <img
+									class="lazyload" data-original="${model.pic }"
+									alt="${model.newsTitle }">
 							</a>
 								<h4 class="title">
-									<a href="/article/4">${model.newsTitle }</a>
+									<a href="article_detail/${model.id }">${model.newsTitle }</a>
 								</h4>
 								<div class="date_hits">
 									<span>${model.author }</span> <span>${model.creatdate }</span>
-								<span><a
-										href="article/${model.category }">建站</a></span>
+									<span><a href="article/${model.category }">建站</a></span>
 									<p class="hits">
 										<i class="Hui-iconfont" title="点击量"></i> ${model.hits }°
 									</p>

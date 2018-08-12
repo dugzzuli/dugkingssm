@@ -4,12 +4,12 @@ body {
 a:hover{
 	text-decoration: none;
 }
-.container:after { /*ä¼˜åŒ–containeré«˜åº¦*/
+.container:after { /*ÓÅ»¯container¸ß¶È*/
 	content:""; 
 	display: block; 
 	clear: both; 
 } 
-/*å¯¼èˆªæ¡*/
+/*µ¼º½Ìõ*/
 .navbar.navbar-fixed-top {
     border-bottom: 1px #222 solid;
 }
@@ -21,7 +21,7 @@ a:hover{
     color:#000;
 }
 .nav>ul>li>a {
-    padding: 0 30px;/*å¯¼èˆªå®½åº¦*/
+    padding: 0 30px;/*µ¼º½¿í¶È*/
     outline: none;
     color: #838383;
     text-decoration: none;
@@ -70,16 +70,15 @@ a:hover{
 .slider .bd img {
     height: 230px;
 }
-/*åˆ†äº«*/
+/*·ÖÏí*/
 .Hui-share .Hui-iconfont {
     font-size: 30px;
 }
-/*é¢æ¿å¤´éƒ¨*/
+/*Ãæ°åÍ·²¿*/
 .tab-category a {
     display: inline-block;
     border-bottom: 3px solid #9E9E9E;
     margin: 0 5px;
-    pointer-events: none;
 }
 .tab-category strong{
 	color: #fff;
@@ -97,7 +96,7 @@ a:hover{
     overflow: hidden;
     font-size: 12px;
 }
-/*æ–‡ç« åˆ—è¡¨*/
+/*ÎÄÕÂÁĞ±í*/
 .index_arc li {
     position: relative;
     height: 110px;
@@ -193,12 +192,12 @@ a:hover{
     color: #444;
 }
 
-/*é¢æ¿body*/
+/*Ãæ°åbody*/
 .tab-category-item {
 	border-top: 1px solid #EDEDED;
 	padding: 10px 10px 10px 15px;
 }
-/*é¢æ¿ä¸»ä½“ li*/
+/*Ãæ°åÖ÷Ìå li*/
 .index_recd li {
     line-height: 32px;
     white-space: nowrap;
@@ -229,14 +228,14 @@ a:hover{
     vertical-align: top;
     font-style: normal;
 }
-/*é¢æ¿ä¸»ä½“ span*/
+/*Ãæ°åÖ÷Ìå span*/
 .tab-category-item>span {
 	margin-right: 30px;
     display: inline-block;
     font-size: 14px;
     line-height: 32px;
 }
-/*æœ€è¿‘è®¿å®¢*/
+/*×î½ü·Ã¿Í*/
 .recent .item {
     display: inline-block;
     margin: 3px;
@@ -245,7 +244,7 @@ a:hover{
     width: 40px;
 }
 
-/*å¯¼èˆªäºŒçº§èœå•*/
+/*µ¼º½¶ş¼¶²Ëµ¥*/
 .nav-btn {
 	width: 42%;
     margin: 5px;
@@ -271,9 +270,9 @@ a.blog_link{ color:#1CA368;}
 /*a.blog_link{ color:#1CA368; margin:0 20px}*/
 
 
-/*æ–‡ç« è¯¦æƒ…*/
+/*ÎÄÕÂÏêÇé*/
 .w_main_left {
-    font: 12px "å®‹ä½“", Arial, Helvetica, sans-serif;
+    font: 12px "ËÎÌå", Arial, Helvetica, sans-serif;
     color: #756F71;
 }
 .c_titile {
@@ -362,7 +361,7 @@ ul.infos p {
 	
 	.index_recd li a {max-width: 60%;}
 
-    /*è¯„è®ºå¤´åƒ*/
+    /*ÆÀÂÛÍ·Ïñ*/
     .avatar.size-L, .avatar.size-L img {
         width: 30px;
         height: 30px;
@@ -374,7 +373,7 @@ ul.infos p {
 @media screen and (max-width:320px) {
     .slider .bd img { height: 100px;}
 }
-/*common  æŠ–åŠ¨*/
+/*common  ¶¶¶¯*/
 .dou {
     -webkit-animation: dou 0.5s .2s ease both;
     -moz-animation: dou 0.5s .2s ease both;

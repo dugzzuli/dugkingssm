@@ -61,7 +61,7 @@ public class HomeController {
 	@RequestMapping("/about")
 	public ModelAndView about() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		
+
 		return new ModelAndView("about", dataMap);
 
 	}
@@ -69,26 +69,54 @@ public class HomeController {
 	@RequestMapping("/article_detail/{id}")
 	public ModelAndView article_detail(@PathVariable("id") int id) {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		News model=newsService.selectByPrimaryKey(id);
+		News model = newsService.selectByPrimaryKey(id);
+		model.setHits(model.getHits() + 1);
+		newsService.updateByPrimaryKeySelective(model);
 		dataMap.put("model", model);
-		return new ModelAndView("article_detail",dataMap);
+		// 热门新闻
+		List<News> listHot = newsService.selectHotNews("hot", 10);
+		dataMap.put("listHot", listHot);
+
+		return new ModelAndView("article_detail", dataMap);
 
 	}
 
 	@RequestMapping("/article")
 	public ModelAndView article() {
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		// 热门新闻
+		List<News> listHot = newsService.selectHotNews("hot", 10);
+		dataMap.put("listHot", listHot);
+		
+		List<News> list = newsService.selectAll();
+		dataMap.put("list", list);
 
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("article");
-		return modelAndView;
+		dataMap.put("category", "");
+
+		
+		List<Category> categoryList = categoryService.selectAll();
+
+		dataMap.put("categoryList", categoryList);
+		return new ModelAndView("article", dataMap);
 	}
 
 	@RequestMapping("/article/{category}")
 	public ModelAndView article(@PathVariable("category") String category) {
 
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("article");
-		return modelAndView;
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		// 热门新闻
+		List<News> listHot = newsService.selectHotNews("hot", 10);
+		dataMap.put("listHot", listHot);
+
+		List<News> list = newsService.selectHotNews(category, 10);
+		dataMap.put("list", list);
+		
+		List<Category> cateModelList = categoryService.selectCategory(category);
+		dataMap.put("category", cateModelList.get(0).getCateName());
+
+		List<Category> categoryList = categoryService.selectAll();
+		dataMap.put("categoryList", categoryList);
+		return new ModelAndView("article", dataMap);
 	}
 
 	@RequestMapping("/board")
