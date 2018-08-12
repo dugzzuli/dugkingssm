@@ -25,9 +25,6 @@
 <script type="text/javascript" charset="utf-8"
 	src="ueditor/lang/zh-cn/zh-cn.js"></script>
 
-<!--     <style type="text/css"> -->
-/* div{ */ /* width:100%; */ /* } */
-<!--     </style> -->
 </head>
 <body>
 	<jsp:include page="./common/managerTopLeft.jsp" />
@@ -43,6 +40,7 @@
 						href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span>
 				</div>
 			</div>
+			 <jsp:include page="./common/cut.jsp" />
 			<div class="result-wrap">
 				<div class="result-content">
 					<form action="<%=basePath%>admin/insert" method="post" id="myform"
@@ -70,8 +68,22 @@
 										type="text"></td>
 								</tr>
 								<tr>
+									<th>SEO描述：</th>
+									<td><input class="common-text" name="seo_desc" size="50"
+										type="text"></td>
+								</tr>
+								<tr>
+									<th>SEO内容：</th>
+									<td><input class="common-text" name="seo_content" size="50"
+										type="text"></td>
+								</tr>
+								<tr>
 									<th><i class="require-red">*</i>缩略图：</th>
 									<td><input name="pic" id="pic" type="text"></td>
+								</tr>
+								<tr>
+									<th><i class="require-red">*</i>摘要：</th>
+									<td><input name="summary" id="summary" type="text"></td>
 								</tr>
 								<tr>
 									<th>内容：</th>

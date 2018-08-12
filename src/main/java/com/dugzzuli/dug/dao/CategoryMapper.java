@@ -2,6 +2,8 @@ package com.dugzzuli.dug.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.dugzzuli.dug.entity.Category;
 
 
@@ -56,4 +58,6 @@ public interface CategoryMapper {
     
     
     List<Category> selectAll();
+
+	List<Category> selectCategory(@Param("category")String category);
 }

@@ -66,4 +66,8 @@ public interface NewsMapper {
 	List<News> selectAll();
 	
 	List<News> selectAllNews(@Param("order")String order, @Param("count")int count);
+
+	List<News> selectHotNews(@Param("hot")String hot, @Param("count")int count);
+
+	News selectByPrimaryKey(@Param("id")int id);
 }

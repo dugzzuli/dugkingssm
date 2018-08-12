@@ -59,4 +59,9 @@ public class CategoryService implements ICategoryService {
 		return categoryMapper.selectAll();
 	}
 
+	public List<Category> selectCategory(String category) {
+		// TODO Auto-generated method stub
+		return categoryMapper.selectCategory(category) ;
+	}
+
 }

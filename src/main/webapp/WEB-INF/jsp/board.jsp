@@ -197,11 +197,11 @@
 					'emotion', '|', 'undo', 'fullscreen' ];
 			editor1.config.emotions = {
 				'default' : {
-					title : '老王表情',
+					title : '表情',
 					data : 'plugin/wangEditor/emotions1.data'
 				},
 				'default2' : {
-					title : '老王心情',
+					title : '心情',
 					data : 'plugin/wangEditor/emotions3.data'
 				},
 				'default3' : {

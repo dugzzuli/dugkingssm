@@ -41,7 +41,9 @@
 	
 	
 	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}
+
 
 
 
@@ -102,7 +104,10 @@
 
 			<div class="mt-20 bg-fff box-shadow radius mb-5">
 				<div class="tab-category">
-					<a href=""><strong class="current">最新发布</strong></a>
+
+					<c:forEach var="model" items="${listCategory}">
+						<a href="article/${model.cateId}"><strong class="current">${model.cateName}</strong></a>
+					</c:forEach>
 				</div>
 			</div>
 			<div class="art_content">
@@ -112,11 +117,11 @@
 
 							<li class="index_arc_item no_pic">
 								<h4 class="title">
-									<a href="/article/5.html">${model.newsTitle }</a>
+									<a href="article_detail/${model.id}">${model.newsTitle }</a>
 								</h4>
 								<div class="date_hits">
 									<span>${model.author}</span> <span>${model.creatdate }</span> <span><a
-										href="/article-lists/10.html">建站</a></span>
+										href="article/${model.category }">建站</a></span>
 									<p class="hits">
 										<i class="Hui-iconfont" title="点击量">&#xe6c1;</i> ${model.hits }°
 									</p>
@@ -125,24 +130,23 @@
 											id="sourceId::105" class="cy_cmt_count">${model.hits }</span>
 									</p>
 								</div>
-								<div class="desc">
-									${model.summary}</div>
+								<div class="desc">${model.summary}</div>
 							</li>
 
 						</c:if>
-						
+
 						<c:if test="${not empty model.pic}">
-							<li class="index_arc_item"><a href="/article/4" class="${model.pic }">
-									<img class="lazyload" data-original="${model.pic }"
-									alt="${model.newsTitle }">
+							<li class="index_arc_item"><a href="article_detail/${model.id }"
+								class="${model.pic }"> <img class="lazyload"
+									data-original="${model.pic }" alt="${model.newsTitle }">
 							</a>
 								<h4 class="title">
 									<a href="/article/4">${model.newsTitle }</a>
 								</h4>
 								<div class="date_hits">
-									<span>${model.author }</span> <span>${model.creatdate }</span> <span> <a
-										href="/article?t=1">程序人生</a>
-									</span>
+									<span>${model.author }</span> <span>${model.creatdate }</span>
+								<span><a
+										href="article/${model.category }">建站</a></span>
 									<p class="hits">
 										<i class="Hui-iconfont" title="点击量"></i> ${model.hits }°
 									</p>
@@ -177,16 +181,16 @@
 				<div class="tab-category-item">
 					<ul class="index_recd">
 						<c:forEach var="model" items="${listHot}">
-						<li><a href="#">${model.newsTitle }</a>
-							<p class="hits">
-								<i class="Hui-iconfont" title="点击量">&#xe622;</i> ${model.hits }
-							</p></li>
+							<li><a href="article_detail/${model.id}">${model.newsTitle }</a>
+								<p class="hits">
+									<i class="Hui-iconfont" title="点击量">&#xe622;</i> ${model.hits }
+								</p></li>
 						</c:forEach>
 					</ul>
 				</div>
 			</div>
 
-<%-- 			<jsp:include page="./common/right.jsp" /> --%>
+			<%-- 			<jsp:include page="./common/right.jsp" /> --%>
 
 
 
@@ -194,7 +198,7 @@
 		</div>
 
 	</section>
-		<jsp:include page="./common/footer.jsp" />
+	<jsp:include page="./common/footer.jsp" />
 	<script type="text/javascript" src="plugin/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="plugin/layer/3.0/layer.js"></script>
 	<script type="text/javascript" src="plugin/h-ui/js/H-ui.min.js"></script>

@@ -70,4 +70,14 @@ public class NewsService implements INewsService {
 		return newsMapper.selectAllNews(order,count);
 	}
 
+	public List<News> selectHotNews(String hot, int count) {
+		// TODO Auto-generated method stub
+		return newsMapper.selectHotNews( hot,  count);
+	}
+
+	public News selectByPrimaryKey(int id) {
+		// TODO Auto-generated method stub
+		return newsMapper.selectByPrimaryKey( id);
+	}
+
 }
