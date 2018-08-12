@@ -129,9 +129,10 @@ public class HomeController {
 
 	@RequestMapping("/mood")
 	public ModelAndView mood() {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("mood");
-		return modelAndView;
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		List<News> list = newsService.selectHotNews("webtrace",10);
+		dataMap.put("list", list);
+		return new ModelAndView("mood",dataMap);
 	}
 
 }

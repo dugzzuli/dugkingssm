@@ -43,7 +43,7 @@ public class NewsService implements INewsService {
 	@Override
 	public int updateByPrimaryKeySelective(News record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return newsMapper.updateByPrimaryKeySelective(record);
 	}
 
 	@Override
