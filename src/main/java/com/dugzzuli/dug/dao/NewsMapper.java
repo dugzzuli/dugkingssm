@@ -70,4 +70,6 @@ public interface NewsMapper {
 	List<News> selectHotNews(@Param("hot")String hot, @Param("count")int count);
 
 	News selectByPrimaryKey(@Param("id")int id);
+
+	News selectModel(@Param("about")String about);
 }

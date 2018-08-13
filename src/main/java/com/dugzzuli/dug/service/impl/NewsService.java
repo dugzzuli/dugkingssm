@@ -19,7 +19,7 @@ public class NewsService implements INewsService {
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return newsMapper.deleteByPrimaryKey(id);
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class NewsService implements INewsService {
 	@Override
 	public News selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return newsMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
@@ -49,13 +49,13 @@ public class NewsService implements INewsService {
 	@Override
 	public int updateByPrimaryKeyWithBLOBs(News record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return newsMapper.updateByPrimaryKeyWithBLOBs(record);
 	}
 
 	@Override
 	public int updateByPrimaryKey(News record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return newsMapper.updateByPrimaryKey(record);
 	}
 
 	@Override
@@ -78,6 +78,11 @@ public class NewsService implements INewsService {
 	public News selectByPrimaryKey(int id) {
 		// TODO Auto-generated method stub
 		return newsMapper.selectByPrimaryKey( id);
+	}
+
+	public News selectModel(String about) {
+		// TODO Auto-generated method stub
+		return newsMapper.selectModel(about);
 	}
 
 }

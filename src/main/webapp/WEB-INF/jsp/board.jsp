@@ -10,35 +10,7 @@
 <html>
 <title>留言板  —（最怕一生碌碌无为,还感叹平凡可贵）</title>
 <meta charset="utf-8">
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="国王的博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
-<LINK rel="Bookmark" href="favicon.ico">
-<LINK rel="Shortcut Icon" href="favicon.ico" />
-<!--[if lt IE 9]>
-<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
-<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" type="text/css"
-	href="plugin/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
-<link rel="stylesheet" type="text/css" href="css/common.css" />
-<link rel="stylesheet" type="text/css" href="plugin/pifu/pifu.css" />
-<link rel="stylesheet" type="text/css"
-	href="plugin/wangEditor/css/wangEditor.min.css">
-<!--[if lt IE 9]>
-<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<script type="application/x-javascript">
-	
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}
-
-</script>
+<jsp:include page="./common/header.jsp"></jsp:include>
 </head>
 <body>
 	<header class="navbar-wrapper">
@@ -52,19 +24,7 @@
 				<nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
 					<jsp:include page="./common/nav.jsp" />
 				</nav>
-				<nav class="navbar-nav navbar-userbar hidden-xs hidden-sm "
-					style="top: 0;">
-					<ul class="cl">
-						<li class="userInfo dropDown dropDown_hover">
-							<!--<a href="javascript:;" ><img class="avatar radius" src="img/40.jpg" alt="丶似浅 "></a>
-                            <ul class="dropDown-menu menu radius box-shadow">
-                                <li><a href="/app/loginOut">退出</a></li>
-                            </ul>--> <a href="/app/qq"
-							onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"><img
-								class="avatar size-S" src="img/qq.jpg" title="登入">登入</a>
-						</li>
-					</ul>
-				</nav>
+				<jsp:include page="./common/QQ.jsp"></jsp:include>
 			</div>
 		</div>
 	</header>

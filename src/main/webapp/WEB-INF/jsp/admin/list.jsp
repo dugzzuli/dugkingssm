@@ -34,7 +34,7 @@
 				<div class="result-content">
 					<ul class="sys-info-list">
 						<c:forEach var="model" items="${list}">
-							<li>${model.newsTitle}<span class="spanclass">${model.author}--${model.creatdate}</span>
+							<li><a href="update/${model.id }">${model.newsTitle}</a><span class="spanclass">${model.author}--${model.creatdate}</span>
 							</li>
 						</c:forEach>
 

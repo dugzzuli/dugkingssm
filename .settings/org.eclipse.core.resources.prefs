@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/jsp/about.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/admin/common/help.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/common/QQ.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/common/header.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/index.jsp=UTF-8

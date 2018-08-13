@@ -63,4 +63,6 @@ public interface ICategoryService{
     
     
     List<Category> selectAll();
+
+	List<Category> selectCategory(String string);
 }

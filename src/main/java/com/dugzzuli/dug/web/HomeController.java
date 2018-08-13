@@ -12,6 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dugzzuli.dug.entity.Category;
 import com.dugzzuli.dug.entity.News;
+import com.dugzzuli.dug.service.ICategoryService;
+import com.dugzzuli.dug.service.INewsService;
 import com.dugzzuli.dug.service.impl.CategoryService;
 import com.dugzzuli.dug.service.impl.NewsService;
 
@@ -19,9 +21,9 @@ import com.dugzzuli.dug.service.impl.NewsService;
 @RequestMapping("/")
 public class HomeController {
 	@Autowired
-	public CategoryService categoryService;
+	public ICategoryService categoryService;
 	@Autowired
-	public NewsService newsService;
+	public INewsService newsService;
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -61,7 +63,8 @@ public class HomeController {
 	@RequestMapping("/about")
 	public ModelAndView about() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-
+		News model=newsService.selectModel("about");
+		dataMap.put("model", model);
 		return new ModelAndView("about", dataMap);
 
 	}

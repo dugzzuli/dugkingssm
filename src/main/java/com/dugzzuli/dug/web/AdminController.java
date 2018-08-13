@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -51,10 +52,10 @@ public class AdminController {
 		Sysuser modelUser = sysuser.selectModel(model);
 		HttpSession session = request.getSession();
 		if (modelUser == null) {
-			return new ModelAndView("/admin/login");
+			return new ModelAndView("redirect: /admin/login");
 		} else {
 			session.setAttribute("admin", "admin");
-			return new ModelAndView("/admin/index");
+			return new ModelAndView("redirect:/admin/index");
 		}
 	}
 
@@ -70,14 +71,34 @@ public class AdminController {
 		dataMap.put("list", list);
 		return new ModelAndView("/admin/list", dataMap);
 	}
+	
+	
+	@RequestMapping("/update/{id}")
+	public ModelAndView update(@PathVariable int id) {
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		News model=newsService.selectByPrimaryKey(id);
+		dataMap.put("model", model);
+		List<Category> list=categoryService.selectAll();
+		dataMap.put("list", list);
+		return new ModelAndView("/admin/update", dataMap);
+	}
+	
+	@RequestMapping(value="/update",method=RequestMethod.POST)
+	public ModelAndView update(News model) {
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		newsService.updateByPrimaryKeySelective(model);
+		return new ModelAndView("redirect:/admin/list", dataMap);
+	}
 
 	@RequestMapping("/insert")
 	public ModelAndView insert() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		List<Category> list = categoryService.selectAll();
+		List<Category> list=categoryService.selectAll();
 		dataMap.put("list", list);
 		return new ModelAndView("/admin/insert", dataMap);
 	}
+	
+	
 
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public ModelAndView insert(News model) {

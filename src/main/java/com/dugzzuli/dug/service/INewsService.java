@@ -66,4 +66,8 @@ public interface INewsService {
 	
 
 	List<News> selectAllNews(String order, int count);
+
+	List<News> selectHotNews(String string, int i);
+
+	News selectModel(String string);
 }
