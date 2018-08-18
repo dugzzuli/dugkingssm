@@ -34,8 +34,8 @@
 				<div class="result-content">
 					<ul class="sys-info-list">
 						<c:forEach var="model" items="${list}">
-							<li><a href="update/${model.id }">${model.newsTitle}</a><span class="spanclass">${model.author}--${model.creatdate}</span>
-							</li>
+							<li><a href="update/${model.id }">${model.newsTitle}</a><span
+								class="spanclass">${model.author}--${model.creatdate}---<a href="delete/${model.id }">删除</a></span></li>
 						</c:forEach>
 
 					</ul>
@@ -59,7 +59,7 @@
 </body>
 </html>
 <style>
-.spanclass{
-float:right;
+.spanclass {
+	float: right;
 }
 </style>

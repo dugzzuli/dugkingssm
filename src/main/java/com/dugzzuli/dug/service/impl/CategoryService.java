@@ -37,19 +37,19 @@ public class CategoryService implements ICategoryService {
 	@Override
 	public Category selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return categoryMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
 	public int updateByPrimaryKeySelective(Category record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return categoryMapper.updateByPrimaryKeySelective(record);
 	}
 
 	@Override
 	public int updateByPrimaryKey(Category record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return categoryMapper.updateByPrimaryKey(record);
 	}
 
 	@Override

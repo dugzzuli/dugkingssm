@@ -28,7 +28,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public ModelAndView index() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		List<News> list = newsService.selectAll();
+		List<News> list = newsService.selectAllNews("category",10);
 		dataMap.put("list", list);
 		// 热门新闻
 		List<News> listHot = newsService.selectHotNews("hot", 10);

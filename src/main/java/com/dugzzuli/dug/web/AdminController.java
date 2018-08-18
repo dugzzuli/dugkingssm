@@ -82,6 +82,14 @@ public class AdminController {
 		dataMap.put("list", list);
 		return new ModelAndView("/admin/update", dataMap);
 	}
+
+	@RequestMapping("/delete/{id}")
+	public ModelAndView delete(@PathVariable("id")int id)
+	{
+		newsService.deleteByPrimaryKey(id);
+		return new ModelAndView("redirect:/admin/list");
+		
+	}
 	
 	@RequestMapping(value="/update",method=RequestMethod.POST)
 	public ModelAndView update(News model) {

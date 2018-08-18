@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>『豪情』后台管理</title>
+    <title>后台管理</title>
    <base href="<%=basePath%>admin/">
 	<link rel="stylesheet" type="text/css" href="css/admin_login.css"/>
 </head>

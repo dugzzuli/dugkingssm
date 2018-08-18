@@ -67,24 +67,24 @@
 									<td><input class="common-text" name="author" size="50"
 										type="text"></td>
 								</tr>
-								<tr>
-									<th>SEO描述：</th>
-									<td><input class="common-text" name="seo_desc" size="50"
-										type="text"></td>
-								</tr>
-								<tr>
-									<th>SEO内容：</th>
-									<td><input class="common-text" name="seo_content" size="50"
-										type="text"></td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<th>SEO描述：</th> -->
+<!-- 									<td><input class="common-text" name="seo_desc" size="50" -->
+<!-- 										type="text"></td> -->
+<!-- 								</tr> -->
+<!-- 								<tr> -->
+<!-- 									<th>SEO内容：</th> -->
+<!-- 									<td><input class="common-text" name="seo_content" size="50" -->
+<!-- 										type="text"></td> -->
+<!-- 								</tr> -->
 								<tr>
 									<th><i class="require-red">*</i>缩略图：</th>
-									<td><input name="pic" id="pic" type="text"></td>
+									<td><input name="pic" id="pic" type="text" size="50"></td>
 								</tr>
-								<tr>
-									<th><i class="require-red">*</i>摘要：</th>
-									<td><input name="summary" id="summary" type="text"></td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<th><i class="require-red">*</i>摘要：</th> -->
+<!-- 									<td><input name="summary" id="summary" type="text" size="50"></td> -->
+<!-- 								</tr> -->
 								<tr>
 									<th>内容：</th>
 									<td><script id="content" name="content" type="text/plain"

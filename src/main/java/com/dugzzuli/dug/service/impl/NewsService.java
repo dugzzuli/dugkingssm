@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.dugzzuli.dug.dao.NewsMapper;
 import com.dugzzuli.dug.entity.News;
 import com.dugzzuli.dug.service.INewsService;
+import com.dugzzuli.dug.util.HanLPUtil;
+import com.dugzzuli.dug.util.TikaUtil;
 @Service
 public class NewsService implements INewsService {
 
@@ -24,13 +26,23 @@ public class NewsService implements INewsService {
 
 	@Override
 	public int insert(News record) {
-		// TODO Auto-generated method stub
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		record.setSeoDesc(secDesc);
+		record.setContent(secContent);
+		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSummary(summary);
 		return newsMapper.insert(record);
 	}
 
 	@Override
 	public int insertSelective(News record) {
-		
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		record.setSeoDesc(secDesc);
+		record.setContent(secContent);
+		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSummary(summary);
 		return newsMapper.insertSelective(record);
 	}
 

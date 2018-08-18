@@ -14,7 +14,7 @@ public class SysuserService implements ISysuser {
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sysuserMapper.deleteByPrimaryKey(id);
 	}
 
 	@Override
@@ -26,25 +26,25 @@ public class SysuserService implements ISysuser {
 	@Override
 	public int insertSelective(Sysuser record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sysuserMapper.insertSelective(record);
 	}
 
 	@Override
-	public ISysuser selectByPrimaryKey(Integer id) {
+	public Sysuser selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return sysuserMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
 	public int updateByPrimaryKeySelective(Sysuser record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sysuserMapper.updateByPrimaryKeySelective(record);
 	}
 
 	@Override
 	public int updateByPrimaryKey(Sysuser record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sysuserMapper.updateByPrimaryKey(record);
 	}
 
 	@Override
