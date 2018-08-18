@@ -42,8 +42,7 @@
 				<div class="slider">
 					<div class="bd">
 						<ul>
-							<li><a href="#" target="_blank"><img
-									src="img/temp/banner1.jpg"></a></li>
+							
 							<li><a href="#" target="_blank"><img
 									src="img/temp/banner8.png"></a></li>
 						</ul>

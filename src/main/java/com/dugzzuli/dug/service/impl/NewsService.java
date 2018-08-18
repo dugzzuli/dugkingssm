@@ -26,10 +26,10 @@ public class NewsService implements INewsService {
 
 	@Override
 	public int insert(News record) {
-		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 3);
-		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
 		record.setSeoDesc(secDesc);
-		record.setContent(secContent);
+		record.setSeoContent(secContent);
 		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
 		record.setSummary(summary);
 		return newsMapper.insert(record);
@@ -37,10 +37,10 @@ public class NewsService implements INewsService {
 
 	@Override
 	public int insertSelective(News record) {
-		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 3);
-		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 3);
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
 		record.setSeoDesc(secDesc);
-		record.setContent(secContent);
+		record.setSeoContent(secContent);
 		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
 		record.setSummary(summary);
 		return newsMapper.insertSelective(record);
@@ -54,19 +54,36 @@ public class NewsService implements INewsService {
 
 	@Override
 	public int updateByPrimaryKeySelective(News record) {
-		// TODO Auto-generated method stub
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSeoDesc(secDesc);
+		record.setSeoContent(secContent);
+		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSummary(summary);
 		return newsMapper.updateByPrimaryKeySelective(record);
 	}
 
 	@Override
 	public int updateByPrimaryKeyWithBLOBs(News record) {
 		// TODO Auto-generated method stub
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSeoDesc(secDesc);
+		record.setSeoContent(secContent);
+		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSummary(summary);
 		return newsMapper.updateByPrimaryKeyWithBLOBs(record);
 	}
 
 	@Override
 	public int updateByPrimaryKey(News record) {
 		// TODO Auto-generated method stub
+		String secDesc=HanLPUtil.extractKeyword(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		String secContent=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSeoDesc(secDesc);
+		record.setSeoContent(secContent);
+		String summary=HanLPUtil.extractSummary(TikaUtil.getStringNoHtml(record.getContent()), 5);
+		record.setSummary(summary);
 		return newsMapper.updateByPrimaryKey(record);
 	}
 
@@ -84,7 +101,7 @@ public class NewsService implements INewsService {
 
 	public List<News> selectHotNews(String hot, int count) {
 		// TODO Auto-generated method stub
-		return newsMapper.selectHotNews( hot,  count);
+		return newsMapper.selectHotNews(hot,  count);
 	}
 
 	public News selectByPrimaryKey(int id) {
@@ -96,5 +113,7 @@ public class NewsService implements INewsService {
 		// TODO Auto-generated method stub
 		return newsMapper.selectModel(about);
 	}
+	
+	
 
 }

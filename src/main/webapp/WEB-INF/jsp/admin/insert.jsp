@@ -64,19 +64,10 @@
 								</tr>
 								<tr>
 									<th>作者：</th>
-									<td><input class="common-text" name="author" size="50"
+									<td><input class="common-text" name="author" size="50" value="杜国王"
 										type="text"></td>
 								</tr>
-<!-- 								<tr> -->
-<!-- 									<th>SEO描述：</th> -->
-<!-- 									<td><input class="common-text" name="seo_desc" size="50" -->
-<!-- 										type="text"></td> -->
-<!-- 								</tr> -->
-<!-- 								<tr> -->
-<!-- 									<th>SEO内容：</th> -->
-<!-- 									<td><input class="common-text" name="seo_content" size="50" -->
-<!-- 										type="text"></td> -->
-<!-- 								</tr> -->
+
 								<tr>
 									<th><i class="require-red">*</i>缩略图：</th>
 									<td><input name="pic" id="pic" type="text" size="50"></td>

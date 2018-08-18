@@ -23,18 +23,17 @@ public class HanLPUtil {
 	}
 	
 	public static String extractKeyword(String content, int count) {
-		return "";
 		
-//		List<String> sentenceList = HanLP.extractKeyword(content, count);
-//		StringBuilder sb=new StringBuilder();
-//		for (int i = 0; i < sentenceList.size(); i++) {
-//			if(i==0)
-//			{
-//				sb.append(sentenceList.get(i));
-//			}else {
-//				sb.append(","+sentenceList.get(i));
-//			}
-//		}
-//		return sb.toString();
+		List<String> sentenceList = HanLP.extractKeyword(content, count);
+		StringBuilder sb=new StringBuilder();
+		for (int i = 0; i < sentenceList.size(); i++) {
+			if(i==0)
+			{
+				sb.append(sentenceList.get(i));
+			}else {
+				sb.append(","+sentenceList.get(i));
+			}
+		}
+		return sb.toString();
 	}
 }

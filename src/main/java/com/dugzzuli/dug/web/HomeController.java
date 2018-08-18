@@ -25,26 +25,8 @@ public class HomeController {
 	@Autowired
 	public INewsService newsService;
 
-	@RequestMapping("/")
+	@RequestMapping(value= {"/","/index"})
 	public ModelAndView index() {
-		Map<String, Object> dataMap = new HashMap<String, Object>();
-		List<News> list = newsService.selectAllNews("category",10);
-		dataMap.put("list", list);
-		// 热门新闻
-		List<News> listHot = newsService.selectHotNews("hot", 10);
-		dataMap.put("listHot", listHot);
-
-		List<News> listHits = newsService.selectAllNews("id", 10);
-		dataMap.put("listHits", listHits);
-
-		List<Category> listCategory = categoryService.selectCategory("Category");
-		dataMap.put("listCategory", listCategory);
-		return new ModelAndView("index", dataMap);
-
-	}
-
-	@RequestMapping("/index")
-	public ModelAndView index2index() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		List<News> list = newsService.selectAll();
 		dataMap.put("list", list);
@@ -58,7 +40,9 @@ public class HomeController {
 		List<Category> listCategory = categoryService.selectCategory("Category");
 		dataMap.put("listCategory", listCategory);
 		return new ModelAndView("index", dataMap);
+
 	}
+
 
 	@RequestMapping("/about")
 	public ModelAndView about() {
@@ -66,7 +50,6 @@ public class HomeController {
 		News model=newsService.selectModel("about");
 		dataMap.put("model", model);
 		return new ModelAndView("about", dataMap);
-
 	}
 
 	@RequestMapping("/article_detail/{id}")

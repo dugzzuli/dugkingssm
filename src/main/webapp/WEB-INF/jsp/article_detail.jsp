@@ -9,15 +9,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>老王个人博客 — 一个站在java开发之路上的草根程序员个人博客网站</title>
+<title>${model.newsTitle } — （最怕一生碌碌无为,还感叹平凡可贵）</title>
 <meta charset="utf-8">
 <base href="<%=basePath%>">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="keywords" content="${model.seoDesc}">
+<meta name="description" content="${model.seoContent}">
 <LINK rel="Bookmark" href="favicon.ico" >
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
