@@ -1,4 +1,4 @@
-package com.dugzzuli.dug.util;
+ï»¿package com.dugzzuli.dug.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,7 +18,7 @@ import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.storage.model.FileInfo;
 import com.qiniu.util.Auth;
 public class UtilsQiniu {
-	//¹ÙÍøµØÖ·
+	//å®˜ç½‘åœ°å€
     //https://developer.qiniu.com/kodo/sdk/1239/java 
     private static final  String accessKey = "vfXFzlOmW349MU5G1jDS5_oOpmXUQ3XjH_T0VcO4";
     private static final  String secretKey = "lfpIqAl2SYxoF_LzeTNkXnKUFK6fX2UPDUeWsfBv";
@@ -29,14 +29,14 @@ public class UtilsQiniu {
         
         System.out.println(domain+uploadPath(path));;
 
-        //É¾³ıbucket
+        //åˆ é™¤bucket
 //      delete(bucketNm, "fdafaf.gif");
 
-        //»ñÈ¡ÎÄ¼şĞÅÏ¢
+        //è·å–æ–‡ä»¶ä¿¡æ¯
         //String [] files = {"Fg2KGXu0vLjTQhGuOZhWIxWgVhy4"};
         //deletes(bucketNm,files);
 
-        //»ñÈ¡ÎÄ¼şĞÅÏ¢
+        //è·å–æ–‡ä»¶ä¿¡æ¯
         //getBucketsInfo();
 
         getFileInfo(bucketNm);
@@ -61,24 +61,24 @@ public class UtilsQiniu {
 	}
 
     /**
-     * »ñÈ¡bucketÀïÃæËùÓĞÎÄ¼şµÄĞÅÏ¢
+     * è·å–bucketé‡Œé¢æ‰€æœ‰æ–‡ä»¶çš„ä¿¡æ¯
      * @param bucketNm
      */
     public static void getFileInfo(String bucketNm) {
         try {
             BucketManager bucketManager = getBucketManager();
 
-            //ÎÄ¼şÃûÇ°×º
+            //æ–‡ä»¶åå‰ç¼€
             String prefix = "";
-            //Ã¿´Îµü´úµÄ³¤¶ÈÏŞÖÆ£¬×î´ó1000£¬ÍÆ¼öÖµ 1000
+            //æ¯æ¬¡è¿­ä»£çš„é•¿åº¦é™åˆ¶ï¼Œæœ€å¤§1000ï¼Œæ¨èå€¼ 1000
             int limit = 1000;
-            //Ö¸¶¨Ä¿Â¼·Ö¸ô·û£¬ÁĞ³öËùÓĞ¹«¹²Ç°×º£¨Ä£ÄâÁĞ³öÄ¿Â¼Ğ§¹û£©¡£È±Ê¡ÖµÎª¿Õ×Ö·û´®
+            //æŒ‡å®šç›®å½•åˆ†éš”ç¬¦ï¼Œåˆ—å‡ºæ‰€æœ‰å…¬å…±å‰ç¼€ï¼ˆæ¨¡æ‹Ÿåˆ—å‡ºç›®å½•æ•ˆæœï¼‰ã€‚ç¼ºçœå€¼ä¸ºç©ºå­—ç¬¦ä¸²
             String delimiter = "";
 
-            //ÁĞ¾Ù¿Õ¼äÎÄ¼şÁĞ±í
+            //åˆ—ä¸¾ç©ºé—´æ–‡ä»¶åˆ—è¡¨
             BucketManager.FileListIterator fileListIterator = bucketManager.createFileListIterator(bucketNm, prefix, limit, delimiter);
             while (fileListIterator.hasNext()) {
-                //´¦Àí»ñÈ¡µÄfile list½á¹û
+                //å¤„ç†è·å–çš„file listç»“æœ
                 FileInfo[] items = fileListIterator.next();
                 for (FileInfo item : items) {
                     System.out.println(item.key);
@@ -95,12 +95,12 @@ public class UtilsQiniu {
     }
 
     /**
-     * »ñÈ¡ËùÓĞµÄbucket
+     * è·å–æ‰€æœ‰çš„bucket
      */
     public static void getBucketsInfo() {
         try {
             BucketManager bucketManager = getBucketManager();
-            //»ñÈ¡ËùÓĞµÄbucketĞÅÏ¢
+            //è·å–æ‰€æœ‰çš„bucketä¿¡æ¯
             String[]  bucketNms = bucketManager.buckets();
             for(String bucket:bucketNms) {
                 System.out.println(bucket);
@@ -110,28 +110,28 @@ public class UtilsQiniu {
         }   
     }
     /**
-     * É¾³ı¶à¸öÎÄ¼ş
-     * @param bucketNm bucketµÄÃû³Æ
-     * @param keys     ÎÄ¼şÃû³ÆÊı×é
-     * //µ¥´ÎÅúÁ¿ÇëÇóµÄÎÄ¼şÊıÁ¿²»µÃ³¬¹ı1000 , Õâ¸öÊÇÆßÅ£Ëù¹æ¶¨µÄ
+     * åˆ é™¤å¤šä¸ªæ–‡ä»¶
+     * @param bucketNm bucketçš„åç§°
+     * @param keys     æ–‡ä»¶åç§°æ•°ç»„
+     * //å•æ¬¡æ‰¹é‡è¯·æ±‚çš„æ–‡ä»¶æ•°é‡ä¸å¾—è¶…è¿‡1000 , è¿™ä¸ªæ˜¯ä¸ƒç‰›æ‰€è§„å®šçš„
      * @return
      */
     public static Result deletes(String bucketNm ,String [] keys) {
         Result result = null;
         try {
-            //µ±ÎÄ¼ş´óÓÚ1000µÄÊ±ºò£¬¾ÍÖ±½Ó²»´¦Àí
+            //å½“æ–‡ä»¶å¤§äº1000çš„æ—¶å€™ï¼Œå°±ç›´æ¥ä¸å¤„ç†
             if(keys.length >1000) {
                 return new Result(false);
             }
 
-            //Éè¶¨É¾³ıµÄÊı¾İ
+            //è®¾å®šåˆ é™¤çš„æ•°æ®
             BucketManager.BatchOperations batchOperations = new BucketManager.BatchOperations();
             batchOperations.addDeleteOp(bucketNm, keys);
             BucketManager bucketManager = getBucketManager();
-            //·¢ËÍÇëÇó
+            //å‘é€è¯·æ±‚
             Response response = bucketManager.batch(batchOperations);
 
-            //·µ»ØÊı¾İ
+            //è¿”å›æ•°æ®
             BatchStatus[] batchStatusList = response.jsonToObject(BatchStatus[].class);
             for (int i = 0; i < keys.length; i++) {
                 BatchStatus status = batchStatusList[i];
@@ -151,9 +151,9 @@ public class UtilsQiniu {
         return result;
     }
     /**
-     * É¾³ıbucketÖĞµÄÎÄ¼şÃû³Æ
-     * @param bucketNm buckerÃû³Æ
-     * @param key ÎÄ¼şÃû³Æ
+     * åˆ é™¤bucketä¸­çš„æ–‡ä»¶åç§°
+     * @param bucketNm buckeråç§°
+     * @param key æ–‡ä»¶åç§°
      * @return 
      */
     public static Result delete(String bucketNm ,String key) {
@@ -169,9 +169,9 @@ public class UtilsQiniu {
     }
 
     /**
-     * ÉÏ´«ÊäÈëÁ÷
-     * @param bucketNm  bucketµÄÃû³Æ
-     * @param in        ÊäÈëÁ÷
+     * ä¸Šä¼ è¾“å…¥æµ
+     * @param bucketNm  bucketçš„åç§°
+     * @param in        è¾“å…¥æµ
      * @return
      */
     public static Result upload(String bucketNm,InputStream in,String key) {
@@ -179,13 +179,13 @@ public class UtilsQiniu {
         try {
             UploadManager uploadManager = getUploadManager(bucketNm);
 
-            //»ñÈ¡token
+            //è·å–token
             String token = getToken(bucketNm);
 
-            //ÉÏ´«ÊäÈëÁ÷
+            //ä¸Šä¼ è¾“å…¥æµ
             Response response = uploadManager.put(in,key,token, null,null);
 
-            //½âÎöÉÏ´«³É¹¦µÄ½á¹û
+            //è§£æä¸Šä¼ æˆåŠŸçš„ç»“æœ
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
             System.out.println(putRet.key);
             System.out.println(putRet.hash);
@@ -198,7 +198,7 @@ public class UtilsQiniu {
         return result;
     }
     /**
-     * Í¨¹ıÎÄ¼şÀ´´«µİÊı¾İ
+     * é€šè¿‡æ–‡ä»¶æ¥ä¼ é€’æ•°æ®
      * @param bucketNm
      * @param file
      * @return
@@ -212,7 +212,7 @@ public class UtilsQiniu {
             String token = getToken(bucketNm);
             Response response = uploadManager.put(file.getAbsolutePath(),newName(file.getName()), token);
 
-            //½âÎöÉÏ´«³É¹¦µÄ½á¹û
+            //è§£æä¸Šä¼ æˆåŠŸçš„ç»“æœ
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
             System.out.println(putRet.key);
             System.out.println(putRet.hash);
@@ -227,7 +227,7 @@ public class UtilsQiniu {
     }
 
     /**
-     * Í¨¹ıÀÏÎÄ¼şµÄÃû³Æ×Ô¶¯Éú³ÉĞÂµÄÎÄ¼ş
+     * é€šè¿‡è€æ–‡ä»¶çš„åç§°è‡ªåŠ¨ç”Ÿæˆæ–°çš„æ–‡ä»¶
      * 
      * @param oldName
      * @return
@@ -240,39 +240,39 @@ public class UtilsQiniu {
     }
 
     /**
-     * »ñÈ¡ÉÏ´«¹ÜÀíÆ÷
+     * è·å–ä¸Šä¼ ç®¡ç†å™¨
      * @param bucketNm
      * @return
      */
     public static UploadManager getUploadManager(String bucketNm) {
-        //¹¹ÔìÒ»¸ö´øÖ¸¶¨Zone¶ÔÏóµÄÅäÖÃÀà
-        //ÇøÓòÒªºÍ×Ô¼ºµÄbucket¶ÔÉÏ£¬²»È»¾ÍÉÏ´«²»³É¹¦
-        //»ª¶«    Zone.zone0()
-        //»ª±±    Zone.zone1()
-        //»ªÄÏ    Zone.zone2()
-        //±±ÃÀ    Zone.zoneNa0()
+        //æ„é€ ä¸€ä¸ªå¸¦æŒ‡å®šZoneå¯¹è±¡çš„é…ç½®ç±»
+        //åŒºåŸŸè¦å’Œè‡ªå·±çš„bucketå¯¹ä¸Šï¼Œä¸ç„¶å°±ä¸Šä¼ ä¸æˆåŠŸ
+        //åä¸œ    Zone.zone0()
+        //ååŒ—    Zone.zone1()
+        //åå—    Zone.zone2()
+        //åŒ—ç¾    Zone.zoneNa0()
         Configuration cfg = new Configuration();
         UploadManager uploadManager = new UploadManager(cfg);
         return uploadManager;
     }
     /**
-     * »ñÈ¡BucketµÄ¹ÜÀí¶ÔÏó
+     * è·å–Bucketçš„ç®¡ç†å¯¹è±¡
      * @return
      */
     public static BucketManager getBucketManager() {
-        //¹¹ÔìÒ»¸ö´øÖ¸¶¨Zone¶ÔÏóµÄÅäÖÃÀà
-        //ÇøÓòÒªºÍ×Ô¼ºµÄbucket¶ÔÉÏ£¬²»È»¾ÍÉÏ´«²»³É¹¦
-        //»ª¶«    Zone.zone0()
-        //»ª±±    Zone.zone1()
-        //»ªÄÏ    Zone.zone2()
-        //±±ÃÀ    Zone.zoneNa0()
+        //æ„é€ ä¸€ä¸ªå¸¦æŒ‡å®šZoneå¯¹è±¡çš„é…ç½®ç±»
+        //åŒºåŸŸè¦å’Œè‡ªå·±çš„bucketå¯¹ä¸Šï¼Œä¸ç„¶å°±ä¸Šä¼ ä¸æˆåŠŸ
+        //åä¸œ    Zone.zone0()
+        //ååŒ—    Zone.zone1()
+        //åå—    Zone.zone2()
+        //åŒ—ç¾    Zone.zoneNa0()
         Configuration cfg = new Configuration(Zone.zone0());
         Auth auth = Auth.create(accessKey, secretKey);
         BucketManager bucketManager = new BucketManager(auth, cfg);
         return bucketManager;
     }
     /**
-     * »ñÈ¡ÆßÅ£ÔÆµÄÉÏ´«Token
+     * è·å–ä¸ƒç‰›äº‘çš„ä¸Šä¼ Token
      * @param bucketNm
      * @return
      */

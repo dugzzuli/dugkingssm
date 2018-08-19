@@ -1,4 +1,4 @@
-package com.dugzzuli.dug.util;
+ï»¿package com.dugzzuli.dug.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -66,12 +66,12 @@ public final class LuceneUtil {
 
 		IndexWriterConfig writerConfig = new IndexWriterConfig(luceneVersion, analyzer);
 		IndexWriter writer = new IndexWriter(fsDirectory, writerConfig);
-		// IndexReader,»ùÓÚIndexWriter´ò¿ªµÄIndexReader
+		// IndexReader,åŸºäºIndexWriteræ‰“å¼€çš„IndexReader
 		IndexReader reader = DirectoryReader.open(writer, true);
 
 		searcher = new IndexSearcher(reader);
 		// update index
-		// openIfChanged,Èç¹ûÓĞÌá½»»òÎ´Ìá½»µÄ±ä»¯£¬¾Í´ò¿ªĞÂµÄindexreader¡£¼Ç×¡¹Ø±Õold reader
+		// openIfChanged,å¦‚æœæœ‰æäº¤æˆ–æœªæäº¤çš„å˜åŒ–ï¼Œå°±æ‰“å¼€æ–°çš„indexreaderã€‚è®°ä½å…³é—­old reader
 		IndexReader newReader = DirectoryReader.openIfChanged((DirectoryReader) reader, indexWriter, true);
 		if (reader != newReader) {
 			searcher = new IndexSearcher(newReader);
@@ -141,20 +141,20 @@ public final class LuceneUtil {
 
 
     /**
-     * ¼ì²éÒ»ÏÂË÷ÒıÎÄ¼ş
+     * æ£€æŸ¥ä¸€ä¸‹ç´¢å¼•æ–‡ä»¶
      */
     public  void check() {
         DirectoryReader directoryReader = null;
         try {
             Directory directory = FSDirectory.open(path);
             directoryReader = DirectoryReader.open(directory);
-            // Í¨¹ıreader¿ÉÒÔÓĞĞ§µÄ»ñÈ¡µ½ÎÄµµµÄÊıÁ¿
-            // ÓĞĞ§µÄË÷ÒıÎÄµµ
-            System.out.println("ÓĞĞ§µÄË÷ÒıÎÄµµ:" + directoryReader.numDocs());
-            // ×Ü¹²µÄË÷ÒıÎÄµµ
-            System.out.println("×Ü¹²µÄË÷ÒıÎÄµµ:" + directoryReader.maxDoc());
-            // É¾µôµÄË÷ÒıÎÄµµ£¬ÆäÊµ²»Ç¡µ±£¬Ó¦¸ÃÊÇÔÚ»ØÊÕÕ¾ÀïµÄË÷ÒıÎÄµµ
-            System.out.println("É¾µôµÄË÷ÒıÎÄµµ:" + directoryReader.numDeletedDocs());
+            // é€šè¿‡readerå¯ä»¥æœ‰æ•ˆçš„è·å–åˆ°æ–‡æ¡£çš„æ•°é‡
+            // æœ‰æ•ˆçš„ç´¢å¼•æ–‡æ¡£
+            System.out.println("æœ‰æ•ˆçš„ç´¢å¼•æ–‡æ¡£:" + directoryReader.numDocs());
+            // æ€»å…±çš„ç´¢å¼•æ–‡æ¡£
+            System.out.println("æ€»å…±çš„ç´¢å¼•æ–‡æ¡£:" + directoryReader.maxDoc());
+            // åˆ æ‰çš„ç´¢å¼•æ–‡æ¡£ï¼Œå…¶å®ä¸æ°å½“ï¼Œåº”è¯¥æ˜¯åœ¨å›æ”¶ç«™é‡Œçš„ç´¢å¼•æ–‡æ¡£
+            System.out.println("åˆ æ‰çš„ç´¢å¼•æ–‡æ¡£:" + directoryReader.numDeletedDocs());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

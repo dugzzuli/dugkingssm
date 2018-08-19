@@ -1,4 +1,4 @@
-/**
+ï»¿/**
  * 
  */
 /**
@@ -24,22 +24,22 @@ public class UserInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		// »ñÈ¡ÇëÇóµÄURL
+		// è·å–è¯·æ±‚çš„URL
 		String url = request.getRequestURI();
-		logger.info("Ä¿Ç°ÕıÔÚ¹ıÂËµÄ:" + url);
-		// URL:login.jspÊÇ¹«¿ªµÄ;Õâ¸ödemoÊÇ³ıÁËlogin.jspÊÇ¿ÉÒÔ¹«¿ª·ÃÎÊµÄ£¬ÆäËüµÄURL¶¼½øĞĞÀ¹½Ø¿ØÖÆ
+		logger.info("ç›®å‰æ­£åœ¨è¿‡æ»¤çš„:" + url);
+		// URL:login.jspæ˜¯å…¬å¼€çš„;è¿™ä¸ªdemoæ˜¯é™¤äº†login.jspæ˜¯å¯ä»¥å…¬å¼€è®¿é—®çš„ï¼Œå…¶å®ƒçš„URLéƒ½è¿›è¡Œæ‹¦æˆªæ§åˆ¶
 		if (url.indexOf("login") >= 0) {
 			return true;
 		}
-		// »ñÈ¡Session
+		// è·å–Session
 		HttpSession session = request.getSession();
 		String admin = (String) session.getAttribute("admin");
 
 		if (admin != null) {
 			return true;
 		}
-		// ²»·ûºÏÌõ¼şµÄ£¬Ìø×ªµ½µÇÂ¼½çÃæ
-		logger.info("Ä¿Ç°ÕıÔÚ¹ıÂËµÄ:" + url+" Ìõ¼ş²»Âú×ã.....");
+		// ä¸ç¬¦åˆæ¡ä»¶çš„ï¼Œè·³è½¬åˆ°ç™»å½•ç•Œé¢
+		logger.info("ç›®å‰æ­£åœ¨è¿‡æ»¤çš„:" + url+" æ¡ä»¶ä¸æ»¡è¶³.....");
 		response.sendRedirect("/ssm/admin/login");
 
 		return false;

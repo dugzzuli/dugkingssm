@@ -1,4 +1,4 @@
-package com.dugzzuli.dug.web;
+锘縫ackage com.dugzzuli.dug.web;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,7 +30,7 @@ public class HomeController {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		List<News> list = newsService.selectAll();
 		dataMap.put("list", list);
-		// 热门新闻
+		// 鐑棬鏂伴椈
 		List<News> listHot = newsService.selectHotNews("hot", 10);
 		dataMap.put("listHot", listHot);
 
@@ -59,7 +59,7 @@ public class HomeController {
 		model.setHits(model.getHits() + 1);
 		newsService.updateByPrimaryKeySelective(model);
 		dataMap.put("model", model);
-		// 热门新闻
+		// 鐑棬鏂伴椈
 		List<News> listHot = newsService.selectHotNews("hot", 10);
 		dataMap.put("listHot", listHot);
 
@@ -70,7 +70,7 @@ public class HomeController {
 	@RequestMapping("/article")
 	public ModelAndView article() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		// 热门新闻
+		// 鐑棬鏂伴椈
 		List<News> listHot = newsService.selectHotNews("hot", 10);
 		dataMap.put("listHot", listHot);
 		
@@ -90,7 +90,7 @@ public class HomeController {
 	public ModelAndView article(@PathVariable("category") String category) {
 
 		Map<String, Object> dataMap = new HashMap<String, Object>();
-		// 热门新闻
+		// 鐑棬鏂伴椈
 		List<News> listHot = newsService.selectHotNews("hot", 10);
 		dataMap.put("listHot", listHot);
 

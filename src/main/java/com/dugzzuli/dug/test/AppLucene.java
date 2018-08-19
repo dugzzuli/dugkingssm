@@ -1,4 +1,4 @@
-package com.dugzzuli.dug.test;
+ï»¿package com.dugzzuli.dug.test;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +16,9 @@ public class AppLucene {
 		LuceneUtil lu;
 		try {
 			lu = new LuceneUtil(new File(dir_write));
-			lu.addDocument("1", "ÎÒÃÇÕâÀïµÈÄã");
+			lu.addDocument("1", "æˆ‘ä»¬è¿™é‡Œç­‰ä½ ");
 			lu.delete("1");
-			lu.searchDocument("ÎÒ");
+			lu.searchDocument("æˆ‘");
 			lu.check();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

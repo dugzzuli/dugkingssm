@@ -1,4 +1,4 @@
-package com.dugzzuli.dug.web;
+锘縫ackage com.dugzzuli.dug.web;
 
 import java.util.HashMap;
 import java.util.List;
@@ -160,7 +160,7 @@ public class AdminController {
 		}
 	}
 
-//	插入用户
+//	鎻掑叆鐢ㄦ埛
 	@RequestMapping("/insertSysUser")
 	public ModelAndView insertSysUser() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
@@ -182,7 +182,7 @@ public class AdminController {
 		}
 	}
 
-//插入分类
+//鎻掑叆鍒嗙被
 	@RequestMapping("/insertCategory")
 	public ModelAndView insertCategory() {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
