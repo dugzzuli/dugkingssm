@@ -72,10 +72,6 @@
 									<th><i class="require-red">*</i>缩略图：</th>
 									<td><input name="pic" id="pic" type="text" size="50"></td>
 								</tr>
-<!-- 								<tr> -->
-<!-- 									<th><i class="require-red">*</i>摘要：</th> -->
-<!-- 									<td><input name="summary" id="summary" type="text" size="50"></td> -->
-<!-- 								</tr> -->
 								<tr>
 									<th>内容：</th>
 									<td><script id="content" name="content" type="text/plain"

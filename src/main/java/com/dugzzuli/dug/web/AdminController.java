@@ -23,6 +23,7 @@ import com.dugzzuli.dug.entity.Sysuser;
 import com.dugzzuli.dug.service.ICategoryService;
 import com.dugzzuli.dug.service.INewsService;
 import com.dugzzuli.dug.service.ISysuser;
+import com.dugzzuli.dug.util.UtilsQiniu;
 
 @Controller
 @RequestMapping("/admin")
@@ -113,6 +114,8 @@ public class AdminController {
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		logger.info(model.toString());
 		try {
+			String pic=UtilsQiniu.uploadPath(model.getPic());
+			model.setPic(pic);
 			int i = newsService.insertSelective(model);
 			return new ModelAndView("redirect:/admin/list", dataMap);
 		} catch (Exception e) {

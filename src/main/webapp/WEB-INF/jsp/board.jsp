@@ -15,8 +15,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,老王博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
+<meta name="keywords" content="个人博客,国王,最怕碌碌无为,还感叹平凡可贵,dugking">
+<meta name="description" content="国王的博客系统，。">
 <LINK rel="Bookmark" href="favicon.ico" >
 <LINK rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>

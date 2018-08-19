@@ -74,9 +74,10 @@
 
 					<c:if test="${not empty model.pic}">
 						<li class="index_arc_item"><a
-							href="article_detail/${model.id }" class="${model.pic }"> <img
-								class="lazyload" data-original="${model.pic }"
-								alt="${model.newsTitle }">
+							href="article_detail/${model.id }" class="pic"> <img
+								class="lazyload" data-original="${model.pic }?ssm"
+								alt="${model.newsTitle }" src="${model.pic }?ssm"
+								style="display: inline-block;">
 						</a>
 							<h4 class="title">
 								<a href="article_detail/${model.id }">${model.newsTitle }</a>
