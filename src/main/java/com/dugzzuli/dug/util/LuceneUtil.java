@@ -35,7 +35,7 @@ import org.json.JSONObject;
 import com.dugzzuli.dug.entity.News;
 
 /**
- * @author Administrator
+ * @author Administrator  学习链接:https://blog.csdn.net/chao2263263364/article/details/48628145
  *
  */
 public final class LuceneUtil {
